@@ -19,6 +19,18 @@
  */
 
 @theme inline {
+  --color-ink: #050506;
+  --color-panel: #0d0e12;
+  --color-panel2: #141519;
+  --color-line: #24252d;
+  --color-azure: #6ea8ff;
+  --color-mint: #57e2c6;
+  --color-gold: #ffbf5c;
+  --color-lilac: #b79cff;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -138,7 +150,23 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-ink);
+    color: #ffffff;
   }
 }
+
+.gloss {
+  position: relative;
+  overflow: hidden;
+}
+
+.gloss::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(140% 90% at 50% -12%, rgba(255, 255, 255, 0.08), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 42%);
+}
+
