@@ -1,14 +1,30 @@
-# Welcome to your Lovable project
+# AI Workplace Genius
+
+Build a modern, responsive web application called Ai Workplace Productivity Assistant that helps professionals automate workplace tasks using AI.
+
+The application should include:
+Smart Email Generator
+Meeting Notes summaries
+AI Task Planner
+AI Researcher Assistance
+
+Requirements
+Morden dashboard UI
+Sidebar navigation
+Responsive design
+Structured AI prompts
+Editable AI output
+Responsible AI disclaimer
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e07cb605-a2af-4912-83f3-88ff73ab2a13).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +36,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
