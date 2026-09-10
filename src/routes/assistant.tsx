@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppLayout } from "@/components/AppLayout";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/assistant")({
   head: () => ({
     meta: [
       { title: "Hale Work OS — AI Workplace Productivity Assistant" },
