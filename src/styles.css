@@ -19,6 +19,13 @@
  */
 
 @theme inline {
+  --color-cream: #faf6f0;
+  --color-shell: #ffffff;
+  --color-sand: #efe6da;
+  --color-bark: #23201d;
+  --color-stone: #6f6760;
+  --color-clay: #c2664a;
+  --color-forest: #2f6f63;
   --color-ink: #050506;
   --color-panel: #0d0e12;
   --color-panel2: #141519;
@@ -149,10 +156,29 @@
     border-color: var(--color-border);
   }
 
-  body {
-    background-color: var(--color-ink);
-    color: #ffffff;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-bark);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .gloss {
