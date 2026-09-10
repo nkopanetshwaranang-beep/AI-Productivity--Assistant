@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 
 const NAV = [
-  { to: "/", label: "Overview", dot: "bg-azure" },
+  { to: "/assistant", label: "Overview", dot: "bg-azure" },
   { to: "/email", label: "Smart Email", dot: "bg-gold/70" },
   { to: "/notes", label: "Meeting Notes", dot: "bg-mint/70" },
   { to: "/planner", label: "Task Planner", dot: "bg-lilac/70" },
@@ -30,7 +30,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
             key={item.to}
             to={item.to}
             onClick={onNavigate}
-            activeOptions={{ exact: item.to === "/" }}
+            activeOptions={{ exact: item.to === "/assistant" }}
             className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-white/55 transition-colors hover:bg-white/[0.03] hover:text-white/80"
             activeProps={{
               className: "border border-line bg-white/[0.04] text-white font-medium",
@@ -41,6 +41,15 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
           </Link>
         ))}
       </nav>
+      <div className="px-3 pt-2">
+        <Link
+          to="/"
+          onClick={onNavigate}
+          className="block rounded-xl border border-line px-3 py-2 text-xs text-white/50 hover:bg-white/[0.04] hover:text-white/80"
+        >
+          ← Back to portfolio
+        </Link>
+      </div>
       <div className="m-3 mt-auto rounded-xl border border-line bg-panel2 p-3">
         <p className="mb-2 text-[10px] uppercase tracking-[0.18em] text-white/35">Responsible AI</p>
         <p className="text-[11px] leading-relaxed text-white/45">

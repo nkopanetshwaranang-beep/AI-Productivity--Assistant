@@ -1,0 +1,3 @@
+PLACEHOLDER CV
+
+Replace this file with Tshwaranang's real CV (PDF) at public/tshwaranang-cv.pdf and update the Download CV link.
