@@ -157,7 +157,18 @@ const EDUCATION = [
   },
 ];
 
-const PROJECTS = [
+type Project = {
+  title: string;
+  image: string;
+  description: string;
+  features: string[];
+  skills: string[];
+  to?: "/assistant";
+  href?: string;
+  cta: string;
+};
+
+const PROJECTS: Project[] = [
   {
     title: "AI Workplace Productivity Assistant",
     image: projectAi,
