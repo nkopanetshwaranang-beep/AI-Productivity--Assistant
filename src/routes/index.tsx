@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/portfolio/SiteNav";
 import { Certificates } from "@/components/portfolio/Certificates";
 import { ContactForm } from "@/components/portfolio/ContactForm";
-import profileImg from "@/assets/profile-placeholder.jpg";
+import profileAsset from "@/assets/tshwaranang-profile.jpg.asset.json";
 import projectAi from "@/assets/project-ai.jpg";
 import projectChildcare from "@/assets/project-childcare.jpg";
 import projectGrowth from "@/assets/project-growth.jpg";
@@ -221,10 +221,10 @@ const STRENGTHS = [
 ];
 
 const CONTACT_DETAILS = [
-  { label: "Email", value: "your.email@example.com  (replace)" },
-  { label: "Phone", value: "+27 XX XXX XXXX  (replace)" },
-  { label: "LinkedIn", value: "linkedin.com/in/your-profile  (replace)" },
-  { label: "GitHub", value: "github.com/your-username  (replace)" },
+  { label: "Email", value: "nkopanetshwaranang@gmail.com", href: "mailto:nkopanetshwaranang@gmail.com" },
+  { label: "Phone", value: "078 149 1191", href: "tel:+27781491191" },
+  { label: "LinkedIn", value: "Tshwaranang Nkopane", href: "https://www.linkedin.com/in/tshwaranang-nkopane/" },
+  { label: "GitHub", value: "github.com/nkopanetshwaranang-beep", href: "https://github.com/nkopanetshwaranang-beep/AI-Productivity--Assistant" },
   { label: "Location", value: "Cape Town, South Africa" },
 ];
 
@@ -281,15 +281,12 @@ function Portfolio() {
             <div className="rise relative mx-auto w-full max-w-sm">
               <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-sand via-clay/15 to-forest/15 blur-xl" />
               <img
-                src={profileImg}
+                src={profileAsset.url}
                 width={912}
                 height={1104}
-                alt="Professional portrait placeholder for Tshwaranang — replace with a real photo"
+                alt="Professional portrait of Tshwaranang Nkopane"
                 className="aspect-[4/5] w-full rounded-[2rem] border border-sand object-cover shadow-[0_30px_70px_-40px_rgba(35,32,29,0.6)]"
               />
-              <p className="mt-3 text-center text-[11px] text-stone/80">
-                Placeholder photo — replace with Tshwaranang's own professional picture.
-              </p>
             </div>
           </div>
         </section>
@@ -573,14 +570,23 @@ function Portfolio() {
                       <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-stone">
                         {c.label}
                       </p>
-                      <p className="mt-1 break-words text-sm text-bark">{c.value}</p>
+                      <p className="mt-1 break-words text-sm text-bark">
+                        {c.href ? (
+                          <a
+                            href={c.href}
+                            className="hover:underline"
+                            target={c.href.startsWith("http") ? "_blank" : undefined}
+                            rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          >
+                            {c.value}
+                          </a>
+                        ) : (
+                          c.value
+                        )}
+                      </p>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-6 rounded-2xl bg-clay/10 px-4 py-3 text-xs leading-relaxed text-clay">
-                  These contact details are placeholders. Replace them with Tshwaranang's real
-                  email, phone number and profile links before sharing the site.
-                </p>
               </div>
               <ContactForm />
             </div>
@@ -597,13 +603,19 @@ function Portfolio() {
             <p className="mt-2 text-sm text-cream/60">Cape Town, South Africa</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            {["LinkedIn", "GitHub", "Email"].map((s) => (
+            {[
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/tshwaranang-nkopane/" },
+              { label: "GitHub", href: "https://github.com/nkopanetshwaranang-beep/AI-Productivity--Assistant" },
+              { label: "Email", href: "mailto:nkopanetshwaranang@gmail.com" },
+            ].map((s) => (
               <a
-                key={s}
-                href="#contact"
+                key={s.label}
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="rounded-full border border-cream/20 px-4 py-2 text-xs text-cream/80 transition-colors hover:bg-cream/10"
               >
-                {s}
+                {s.label}
               </a>
             ))}
           </div>
