@@ -252,7 +252,7 @@ function Portfolio() {
                 <span className="size-1.5 rounded-full bg-forest" />
                 Cape Town, South Africa · Open to opportunities
               </span>
-              <h1 className="mt-5 font-display text-5xl leading-[1.02] text-bark md:text-7xl">Tee</h1>
+              <h1 className="mt-5 font-display text-5xl leading-[1.02] text-bark md:text-7xl">Tshwaranang Nkopane</h1>
               <p className="mt-4 text-lg text-forest md:text-xl">
                 Early Childhood Development Professional | AI &amp; Digital Skills Enthusiast
               </p>
